@@ -1,0 +1,644 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    position: relative; /* Для правильного позиционирования кнопки вверх */
+}
+header {
+    background-color: #D2691E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#about {
+    text-align: justify;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#about p {
+    margin-top: 20px;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+section {
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Кнопка "Вверх" */
+.back-to-top {
+    display: none; /* Изначально скрыта */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #D2691E;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    background-image: url('./img/channels4_profile.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 999; /* Обеспечение нахождения выше контента */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding-bottom: 80px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+
+    .logo {
+        top: 5px;
+        left: 5px;
+        width: 80px;
+    }
+
+    /* Стили для секции "О нас" */
+    #about {
+        margin: 20px 10px;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    /* Стили для текста внутри секции "О нас" */
+    #about p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    /* Стили для модального окна */
+    .modal-content {
+        margin: 30% auto;
+        width: 90%;
+    }
+
+    /* Стили для формы */
+    #requestForm input[type="text"],
+    #requestForm input[type="tel"] {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    /* Стили для секции "Услуги" */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-text-container {
+        flex-direction: column;
+    }
+
+    .service-image {
+        max-width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    /* Стили для раздела "Контакты" */
+    #contact {
+        margin: 20px 10px;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    /* Стили для раздела "Стоимость обучения" */
+    #pricing {
+        margin: 20px 10px;
+        padding: 0 10px;
+        font-size: 18px;
+    }
+
+    /* Стили для секции документов */
+    #documents {
+        margin: 20px 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #documents ul {
+        padding-left: 20px;
+    }
+
+    #documents ul li {
+        margin-bottom: 5px;
+    }
+
+    #documents .note {
+        font-size: 14px;
+    }
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для кнопки "Подать заявку" */
+.request-btn {
+    background-color: #D2691E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.request-btn:hover {
+    background-color: #8B4513;
+}
+
+/* Стили для формы */
+#requestForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#requestForm label {
+    margin-bottom: 10px;
+}
+
+#requestForm input[type="text"],
+#requestForm input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили для кнопки "Отправить" */
+#requestForm button[type="submit"] {
+    background-color: #D2691E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#requestForm button[type="submit"]:hover {
+    background-color: #8B4513;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+}
+
+.service h3 {
+    margin-top: 10px;
+}
+
+.service button {
+    margin-top: 10px;
+    background-color: #D2691E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.service button:hover {
+    background-color: #A0522D;
+}
+.services-text-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-right: 0px;
+}
+
+.service-image {
+    max-width: 300px;
+    margin-right: 20px;
+    align-self: flex-start;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.about-text {
+    text-align: justify;
+    margin: 20px 0;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+}
+
+#services {
+    padding: 20px;
+}
+
+#services h2 {
+    text-align: center;
+}
+
+#services p {
+    margin-top: 20px;
+}
+/* Стили для раздела "Контакты" */
+#contact {
+    text-align: justify;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+.contact-text {
+    margin-top: 20px;
+    text-align: justify;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+/* Стили для раздела "Стоимость обучения" */
+#pricing {
+    text-align: justify;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#pricing h2 {
+    text-align: center;
+}
+
+.pricing-text {
+    margin-top: 20px;
+    text-align: justify;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+body {
+    padding-bottom: 60px;
+}
+
+/* Стили для нижней шапки (подвала) */
+footer {
+    background-color: #D2691E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.content-wrapper {
+    padding-bottom: 60px; /* Высота подвала */
+}
+
+/* Стили для нижней шапки (подвала) */
+
+
+/* Стили для текста */
+.about-text {
+    text-align: justify;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+}
+
+.request-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+header {
+    background-color: #D2691E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+/* Кнопка "Вверх" */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #D2691E;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    line-height: 50px;
+    background-image: url('./img/channels4_profile.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 999;
+}
+
+footer {
+    background-color: #D2691E;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 10px;
+    }
+    nav {
+        padding: 5px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    section {
+        padding: 10px;
+    }
+    footer {
+        padding: 10px 0;
+    }
+    .logo {
+        top: 5px;
+        left: 5px;
+        width: 80px;
+    }
+    /* Стили для кнопки "Вверх" */
+    .back-to-top {
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .pricing-text {
+        word-wrap: break-word; /* Разрешает переносить слова на новую строку, чтобы текст не выходил за пределы экрана */
+    }
+}
+
+#map-container {
+    width: 100%;
+    height: 509px; 
+}
+
+@media (max-width: 600px) {
+    #map-container {
+        height: 300px; /* Высота карты на мобильных устройствах */
+    }
+}
+#contact {
+    padding: 20px;
+}
+
+#map-container {
+    width: 100%;
+    height: 509px; /* Высота карты на десктопе */
+}
+
+@media (max-width: 600px) {
+    #map-container {
+        height: 300px; /* Высота карты на мобильных устройствах */
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#pricing {
+    padding: 20px;
+    text-align: center;
+}
+
+.pricing-text-container {
+    margin-top: 20px;
+}
+
+.pricing-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.pricing-link {
+    color: #D2691E;
+    text-decoration: none;
+    display: block; 
+    padding: 10px 0;
+}
+
+.pricing-link:hover {
+    text-decoration: underline;
+}
+
+.request-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.request-btn:hover {
+    background-color: #A0522D;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .pricing-text {
+        font-size: 14px;
+    }
+
+    .pricing-link {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .request-btn {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+}
+.service img {
+    vertical-align: middle;
+    max-width: 100%;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./img/X-B1XLj3yAQ.png" alt="Логотип ДОПОГ" class="logo">
+        </a>
+        <h1>Наши услуги</h1>
+    </header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="tests.html">Тесты</a>
+        <button onclick="openForm()" class="request-btn">Подать заявку</button>
+    </nav>
+    
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service">
+                <img src="./img/1695978014_gas-kvas-com-p-kartinki-benzovoz-23.jpg" alt="Изображение услуги 1">
+                <h3>Базовый курс подготовки</h3>
+                <p>Водитель получает основополагающие знания и включает в себя изучение характеристик опасных грузов, требования к подвижному составу и дополнительному оборудованию, особенности организации перевозок...</p>
+                <p>7 000 руб.</p>
+                <button onclick="openForm()" class="request-btn">Оставить заявку</button>
+            </div>
+            <div class="service">
+                <img src="./img/benzovoz.png" alt="Изображение услуги 2">
+                <h3>Специализированный курс подготовки по перевозке в цистернах</h3>
+                <p>Включает в себя изучение специфических вопросов, связанных с особенностями транспортировки опасных грузов в цистернах, динамических характеристик цистерн, способы заливки и слива и т.д. После прохождения обучения и успешной сдачи экзамена по «Основному курсу» водитель имеет право перевозить опасные грузы в цистернах.</p>
+                <p>3 000 руб.</p>
+                <button onclick="openForm()" class="request-btn">Оставить заявку</button>
+            </div>
+            <div class="service">
+                <img src="./img/1.2.jpg" alt="Изображение услуги 3">
+                <h3>Специализированный курс подготовки по перевозке веществ и изделий класса 1</h3>
+                <p>Включает в себя изучение особенности перевозки опасных грузов класса 1 (Взрывчатые вещества и изделия), физико-химические свойства взрывчатых веществ и их совместная перевозка, требования к транспортным средствам, упаковкам и дополнительному оборудованию транспортных средств. После окончания курса и успешной сдачи экзамена водитель имеет право перевозить опасные груза класса 1.</p>
+                <p>3 000 руб.</p>
+                <button onclick="openForm()" class="request-btn">Оставить заявку</button>
+            </div>
+            <div class="service">
+                <img src="./img/bitumovozi.png" alt="Изображение услуги 4">
+                <h3>Специализированный курс подготовки по перевозке радиоактивных материалов класса 7</h3>
+                <p>Изучаются особенности перевозки радиоактивных веществ, их физико-химические свойства, способы радиационной защиты, требования к упаковкам и дополнительному оборудованию транспортных средств. После окончания курса и успешной сдачи экзамена водитель имеет право перевозить опасные груза класса 7.</p>
+                <p>3 000 руб.</p>
+                <button onclick="openForm()" class="request-btn">Оставить заявку</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="requirements" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h2 class="centered" style="color: #080300;">Чтобы начать обучение нужно:</h2>
+        <div>
+            <p class="about-text" style="text-align: justify;">
+                Вы должны приготовить следующие документы:
+            </p>
+            <ul class="about-text" style="list-style-type: decimal; padding-left: 20px;">
+                <li>Скан или копию паспорта (1 страница и прописка)</li>
+                <li>Скан или копию водительского удостоверения (с 2-х сторон)</li>
+                <li>Скан или копию действующего ДОПОГ (с 2-х сторон), если имеется</li>
+                <li>Фото в электронном (цифровом) виде 3х4 по грудь (при отсутствии, мы сделаем фото у нас в офисе БЕСПЛАТНО)</li>
+                <li>Оплатить обучение</li>
+            </ul>
+            <p class="about-text" style="text-align: justify;">
+                <em>Госпошлина за выдачу ДОПОГ оплачивается при получении самого свидетельства в Ространснадзоре</em>
+            </p>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Подать заявку</h2>
+            <form id="requestForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" placeholder="Имя" name="name" required>
+                <label for="phone">Номер телефона (только цифры, 11 символов):</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7(900) 800-00-00" pattern="[0-9]{11}" maxlength="11" required>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="formMessage" style="display:none;"></div>
+        </div>
+    </div>
+   
+
+    <div class="content-wrapper">
+        <footer>
+            <p>&copy; 2024 ДОПОГ </p>
+        </footer>
+    </div>
+
+    <button onclick="scrollToTop()" class="back-to-top"></button>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+

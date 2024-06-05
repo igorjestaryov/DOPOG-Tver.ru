@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный центр "ДОПОГ-Тверь.РФ"</title>
+    <link rel="icon" href="./img/i.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="./img/X-B1XLj3yAQ.png" alt="Логотип ДОПОГ" class="logo">
+        </a>
+        <h1>"ДОПОГ-Тверь.РФ"</h1>
+    </header>
+    <nav> 
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="tests.html">Тесты</a>
+        <button onclick="openForm()" class="request-btn">Подать заявку</button>
+    </nav>
+    <section id="about">
+        <h2>ДОПОГ обучение в г. Твери</h2>
+        <p>Если вы собираетесь возить опасные грузы или уже возите, то у вас обязательно должно быть свидетельство ДОПОГ — документ, подтверждающий право водителя заниматься этим видом деятельности. В случае отсутствия или наличия поддельного документа ДОПОГ для водителя предусмотрена административная и уголовная ответственность, юридическое лицо налагается огромный штраф от 400 000 до 500 000 рублей.</p>
+        <p>Для получения данного документа вы должны пройти обучение в учебной организации, имеющей удостоверение на курсы от Ространснадзора и сдать экзамен в комиссии Ространснадзора.</p>
+        <button onclick="openForm()" class="request-btn">Подать заявку</button>
+        <div class="services-text-container">
+            <img src="./img/dopog-kamaz.jpg" alt="Изображение ДОПОГ" class="service-image">
+            <div class="text-content">
+                <p class="about-text">
+                    Существует всего четыре программы подготовки для водителей, перевозящих опасные грузы:<br><br>
+                    1. БАЗОВЫЙ — обязательный для всех водителей перевозящих любые ОГ (опасные грузы) за исключением перевозок в цистернах, веществ и изделии 1-го и 7-го классов (взрывчатых веществ и радиации).<br>
+                    2. Перевозка ОГ в цистернах — курс подготовки дающий право перевозок ОГ (опасных грузов) в цистернах, за исключением жидких взрывчатых веществ и радиации.<br>
+                    3. Перевозка ОГ (опасных грузов) 1-го класса (взрывчатые вещества и изделия) — курс для водителей перевозящих взрывчатку, снаряды, боеприпасы и т.п.<br>
+                    4. Перевозка ОГ (опасных грузов) 7-го класса (радиоактивные материалы, вещества и изделия).
+                </p>
+                <p class="about-text">
+                    Существует всего четыре программы подготовки для водителей, перевозящих опасные грузы:<br>
+                    Курс подготовки занимает от 5-и до по 10-ти учебных дней, плюс день экзамена в ространснадзоре. Изготовление и получение пластикового Свидетельства ДОПОГ от двух недель до месяца.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>НАШИ ПРЕИМУЩЕСТВА!</h2>
+        <div class="contact-text-container">
+            <p class="contact-text">
+                Понимая вашу занятость (бесконечные рейсы, поездки и командировки), мы разработали очно-дистанционную систему обучения на ДОПОГ! Кроме того, всем нашим ученикам мы даем бесплатно доступ к системе дистанционного тестирования по любому курсу обучения. Система разработана при участии Алексея Пахно — официального представителя РФ в ООН по вопросам перевозок опасных грузов. Изучать материал, а также решать билеты вы теперь можете в любом месте, даже не имея высокоскоростного интернета.
+            </p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Стоимость обучения</h2>
+        <div class="pricing-text-container">
+            <p class="pricing-text">
+                <strong><a href="services.html" class="pricing-link">Базовый курс подготовки (обязательный курс для всех водителей)........................................................ 7000₽</a></strong><br>
+                <strong><a href="services.html" class="pricing-link">Специализированный курс подготовки по перевозке в цистернах ............................................................3000₽</a></strong><br>
+                <strong><a href="services.html" class="pricing-link">Специализированный курс подготовки по перевозке веществ и изделий класса 1 ...............................3000₽</a></strong><br>
+                <strong><a href="services.html" class="pricing-link">Специализированный курс подготовки по перевозке радиоактивных материалов класса 7 ...............3000₽</a></strong><br>
+            </p>
+            <button onclick="openForm()" class="request-btn">Подать заявку</button>
+        </div>
+    </section>    
+        
+        <section id="requirements" style="padding: 20px; max-width: 800px; margin: 0 auto;">
+            <h2 class="centered" style="color: #080300;">Чтобы начать обучение нужно:</h2>
+            <div>
+                <p class="about-text" style="text-align: justify;">
+                    Вы должны приготовить следующие документы:
+                </p>
+                <ul class="about-text" style="list-style-type: decimal; padding-left: 20px;">
+                    <li>Скан или копию паспорта (1 страница и прописка)</li>
+                    <li>Скан или копию водительского удостоверения (с 2-х сторон)</li>
+                    <li>Скан или копию действующего ДОПОГ (с 2-х сторон), если имеется</li>
+                    <li>Фото в электронном (цифровом) виде 3х4 по грудь (при отсутствии, мы сделаем фото у нас в офисе БЕСПЛАТНО)</li>
+                    <li>Оплатить обучение</li>
+                </ul>
+                <p class="about-text" style="text-align: justify;">
+                    <em>Госпошлина за выдачу ДОПОГ оплачивается при получении самого свидетельства в Ространснадзоре</em>
+                </p>
+            </div>
+        </section>
+        
+        <button onclick="scrollToTop()" class="back-to-top"></button>
+        <div class="content-wrapper">
+            <footer>
+                <p>&copy; 2024 ДОПОГ </p>
+            </footer>
+        </div>
+    
+       <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2>Подать заявку</h2>
+        <form id="requestForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" placeholder="Имя" name="name" required>
+            <label for="phone">Номер телефона (только цифры, 11 символов):</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7(900) 800-00-00" pattern="[0-9]{11}" maxlength="12" required>
+            <button type="submit">Отправить</button>
+        </form>
+        <div id="formMessage" style="display:none;"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+    </body>
+    </html>
+    
