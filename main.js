@@ -88,3 +88,4 @@ window.addEventListener("DOMContentLoaded", function() {
     window.closeForm = closeForm;
     window.submitForm = submitForm;
 });
+

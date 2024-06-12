@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Тестирование ДОПОГ</title>
+    <link rel="stylesheet" href="tests.css">
+    <link rel="icon" href="./img/i.jpg" type="image/jpeg">
 </head>
 <body>
     <header>
         <a href="index.html">
             <img src="./img/X-B1XLj3yAQ.png" alt="Логотип ДОПОГ" class="logo">
         </a>
-        <h1>Контакты</h1>
+        <h1>Онлайн Тестирование</h1>
     </header>
-    <nav>
+    <nav> 
         <a href="index.html">Главная</a>
         <a href="services.html">Услуги</a>
         <a href="contacts.html">Контакты</a>
         <a href="tests.html">Тесты</a>
-        <button onclick="openForm()" class="request-btn">Подать заявку</button>
     </nav>
     
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeForm()">&times;</span>
-            <h2>Подать заявку</h2>
-            <form id="requestForm">
-                <label for="name">Имя:</label>
-                <input type="text" id="name" placeholder="Имя" name="name" required>
-                <label for="phone">Номер телефона (только цифры, 10 символов):</label>
-                <input type="tel" id="phone" name="phone" placeholder="+7(900) 800-00-00" pattern="[0-9]{11}" maxlength="11" required>
-                <button type="submit">Отправить</button>
-            </form>
-            <div id="formMessage" style="display:none;"></div>
+    <section id="tests" class="content-wrapper"> <!-- Добавляем класс content-wrapper для центрирования -->
+        <div class="intro-text">
+            Здесь вы можете пройти бесплатное тестирование по каждому курсу, чтобы оценить ваш уровень знаний. Это поможет вам определить, какие темы требуют дополнительного внимания и какие курсы будут наиболее полезны для вашего дальнейшего обучения. Получите объективную оценку своих навыков и выберите оптимальный путь для профессионального роста!
         </div>
-    </div>
-   
-    <div class="content-Footer">
-        <!-- Основное содержимое страницы -->
+        <div class="test-block" data-test="basic">
+            <h2>Тестирование по "Базовому" курсу</h2>
+            <p>Пройдите тест по базовому курсу ДОПОГ.</p>
+        </div>
+        <div class="test-block" data-test="tanks">
+            <h2>Тестирование по "Специализированному курсу подготовки по перевозке в цистернах"</h2>
+            <p>Пройдите тест по специализированному курсу подготовки по перевозке в цистернах.</p>
+        </div>
+        <div class="test-block" data-test="class1">
+            <h2>Тестирование по "Специализированному курсу подготовки по перевозке веществ и изделий класса 1"</h2>
+            <p>Пройдите тест по специализированному курсу подготовки по перевозке веществ и изделий класса 1.</p>
+        </div>
+        <div class="test-block" data-test="class7">
+            <h2>Тестирование по "Специализированному курсу подготовки по перевозке радиоактивных материалов класса 7"</h2>
+            <p>Пройдите тест по специализированному курсу подготовки по перевозке радиоактивных материалов класса 7.</p>
+        </div>
+    </section>
+
+    <div id="quiz-container" class="hide content-wrapper"> 
+        <div id="question-container">
+            <div id="question"></div>
+            <div id="answers"></div>
+        </div>
+        <button onclick="window.location.href='tests.html';" class="nav-btn">Выйти из теста</button>
+        <button id="next-btn" class="request-btn">Следующий</button>
     </div>
 
-    <footer>
-        <p>&copy; 2024 ДОПОГ </p>
-    </footer>
 
-    <button onclick="scrollToTop()" class="back-to-top">⬆</button>
-    <script src="main.js"></script>
+        <footer>
+            <p>&copy; 2024 ДОПОГ </p>
+        </footer>
+
+    <script src="tests.js"></script>
 </body>
 </html>
